@@ -28,6 +28,7 @@ public class Statusbar : MonoBehaviour
         
     }
 
+    
     public void SetMaxHealth(int health)
     {
         H_slider.maxValue = health;
