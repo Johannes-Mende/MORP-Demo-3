@@ -17,6 +17,10 @@ public class EquipmentController : MonoBehaviour
     
     public List<ItemSlot> ItemSlots  = new List<ItemSlot>();
 
+    public List<GameObject> HealthSumm = new List<GameObject>();
+    public List<GameObject> ManaSumm = new List<GameObject>();
+    public List<GameObject> StaminaSumm = new List<GameObject>();
+
     void Awake()
     {
         access = this;
@@ -38,7 +42,22 @@ public class EquipmentController : MonoBehaviour
         
         for (int i = 0; i < ItemSlots.Count; i++)
         {
-            ItemSlots[i] = default;
+            //ItemSlots[i] = default;
+            
+            if (true)
+            {
+                
+            }
+            if (true)
+            {
+                
+            }
+            if (true)
+            {
+                
+            }
         }
     }
+
+
 }
