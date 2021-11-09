@@ -6,6 +6,7 @@ using System;
 public class EquipmentController : MonoBehaviour
 {
     public EquipmentController access;
+    public Statusbar SB;
 [Serializable]
     public struct Equippable     //Conmumable
     {
@@ -17,9 +18,7 @@ public class EquipmentController : MonoBehaviour
     
     public List<ItemSlot> ItemSlots  = new List<ItemSlot>();
 
-    public List<GameObject> HealthSumm = new List<GameObject>();
-    public List<GameObject> ManaSumm = new List<GameObject>();
-    public List<GameObject> StaminaSumm = new List<GameObject>();
+    public List<GameObject> Summs = new List<GameObject>();
 
     void Awake()
     {
@@ -57,6 +56,36 @@ public class EquipmentController : MonoBehaviour
                 
             }
         }
+    }
+
+    public void addItem(GameObject Obj)
+    {
+        Summs.Add(Obj);
+        //hier muss vorher eine funktion rein die denn Wert vom Obj über nimmt undzusammen rechnet
+        
+        if (Obj.tag == "Orb_H")
+        {
+            int maxHealth;
+            maxHealth = Obj.GetComponent<DragDrop>().oneEquip.wert;
+            SB.access.SetMaxHealth(maxHealth);
+        }
+        if (Obj.tag == "Orb_M")
+        {
+            int maxMana;
+            maxMana = Obj.GetComponent<DragDrop>().oneEquip.wert;
+            SB.access.SetMaxMana(maxMana);
+        }
+        if (Obj.tag == "Orb_S")
+        {
+            int maxStamina;
+            maxStamina = Obj.GetComponent<DragDrop>().oneEquip.wert;
+            SB.access.SetMaxStamina(maxStamina);
+        }
+    }
+
+    public void removeItem(GameObject Obj)
+    {
+        Summs.Remove(Obj);
     }
 
 

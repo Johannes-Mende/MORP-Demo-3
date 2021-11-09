@@ -15,8 +15,14 @@ public class Statusbar : MonoBehaviour
     public Text M_text;
     public Text S_text;
 
+    public Statusbar access;
+
     // text setzt sich zusammen aus health + / + maxHealth
 
+    void Awake() 
+    {
+        access = this;
+    }
     void Start()
     {
 
@@ -32,6 +38,7 @@ public class Statusbar : MonoBehaviour
     {
         H_slider.maxValue = health;
         H_slider.value = health;
+        H_text.text = health.ToString(); 
     }
     public void SetHealth(int health)
     {
@@ -42,6 +49,7 @@ public class Statusbar : MonoBehaviour
     {
         M_slider.maxValue = mana;
         M_slider.value = mana;
+        M_text.text = mana.ToString();
     }
     public void SetMana(int mana)
     {
@@ -52,6 +60,7 @@ public class Statusbar : MonoBehaviour
     {
         S_slider.maxValue = stamina;
         S_slider.value = stamina;
+        S_text.text = stamina.ToString();
     }
     public void SetStamina(int stamina)
     {
