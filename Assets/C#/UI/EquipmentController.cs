@@ -14,6 +14,7 @@ public class EquipmentController : MonoBehaviour
         public int wert;
         public GameObject objekt;
         public GameObject slot;
+        public int ZWert;
     }
     
     public List<ItemSlot> ItemSlots  = new List<ItemSlot>();
@@ -65,9 +66,15 @@ public class EquipmentController : MonoBehaviour
         
         if (Obj.tag == "Orb_H")
         {
-            int maxHealth;
-            maxHealth = Obj.GetComponent<DragDrop>().oneEquip.wert;
-            SB.access.SetMaxHealth(maxHealth);
+            int health;
+            // health = Obj.GetComponent<DragDrop>().oneEquip.ZWert + Obj.GetComponent<DragDrop>().oneEquip.wert;
+            // SB.access.SetMaxHealth(health);
+            // Obj.GetComponent<DragDrop>().oneEquip.ZWert = health + Obj.GetComponent<DragDrop>().oneEquip.wert;
+            
+            health = Obj.GetComponent<DragDrop>().oneEquip.ZWert + Obj.GetComponent<DragDrop>().oneEquip.wert;
+            Obj.GetComponent<DragDrop>().oneEquip.ZWert = health;
+            SB.access.SetMaxHealth(health);
+            health = 0;
         }
         if (Obj.tag == "Orb_M")
         {
