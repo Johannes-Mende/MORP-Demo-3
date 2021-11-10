@@ -611,6 +611,7 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 582809217}
+    ZWert: 0
 --- !u!114 &582809220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,6 +705,7 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 605305252}
+    ZWert: 0
 --- !u!114 &605305255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,7 +909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3092698591321781893, guid: e296b426ccd486c48b50f30ed4767c19, type: 3}
       propertyPath: m_Value
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3092698591437691625, guid: e296b426ccd486c48b50f30ed4767c19, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1127,6 +1129,7 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 876449176}
+    ZWert: 0
 --- !u!114 &876449179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1341,6 +1344,7 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 1106968095}
+    ZWert: 0
 --- !u!114 &1106968098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1614,6 +1618,7 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 2027670108}
+    ZWert: 0
 --- !u!114 &2027670111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,6 +1712,7 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 2034352586}
+    ZWert: 0
 --- !u!114 &2034352589
 MonoBehaviour:
   m_ObjectHideFlags: 0
