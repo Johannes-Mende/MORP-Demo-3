@@ -205,6 +205,13 @@ MonoBehaviour:
   H_text: {fileID: 703331331}
   M_text: {fileID: 626379569}
   S_text: {fileID: 692744791}
+  maxHealth: 0
+  currentHealth: 0
+  hitdamage: 0
+  maxMana: 0
+  currentMana: 0
+  maxStamina: 0
+  currentStamina: 0
   access: {fileID: 0}
 --- !u!4 &122763927
 Transform:
@@ -611,7 +618,6 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 582809217}
-    ZWert: 0
 --- !u!114 &582809220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -705,7 +711,6 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 605305252}
-    ZWert: 0
 --- !u!114 &605305255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -867,6 +872,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 375303605}
     m_Modifications:
+    - target: {fileID: 3092698591004161537, guid: e296b426ccd486c48b50f30ed4767c19, type: 3}
+      propertyPath: m_Text
+      value: 0 / 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3092698591004161550, guid: e296b426ccd486c48b50f30ed4767c19, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1042.7725
@@ -963,6 +972,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3092698592494064337, guid: e296b426ccd486c48b50f30ed4767c19, type: 3}
+      propertyPath: m_Text
+      value: '0 / 0
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 3092698592494064350, guid: e296b426ccd486c48b50f30ed4767c19, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1042.7721
@@ -970,6 +985,12 @@ PrefabInstance:
     - target: {fileID: 3092698592494064350, guid: e296b426ccd486c48b50f30ed4767c19, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1.299963
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092698592509813818, guid: e296b426ccd486c48b50f30ed4767c19, type: 3}
+      propertyPath: m_Text
+      value: '0 / 0
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3092698592509813819, guid: e296b426ccd486c48b50f30ed4767c19, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1129,7 +1150,6 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 876449176}
-    ZWert: 0
 --- !u!114 &876449179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1344,7 +1364,6 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 1106968095}
-    ZWert: 0
 --- !u!114 &1106968098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,7 +1637,6 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 2027670108}
-    ZWert: 0
 --- !u!114 &2027670111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1712,7 +1730,6 @@ MonoBehaviour:
     wert: 0
     objekt: {fileID: 0}
     slot: {fileID: 2034352586}
-    ZWert: 0
 --- !u!114 &2034352589
 MonoBehaviour:
   m_ObjectHideFlags: 0
