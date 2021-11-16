@@ -98,6 +98,31 @@ public class EquipmentController : MonoBehaviour
     public void removeItem(GameObject Obj)
     {
         Summs.Remove(Obj);
+
+        if (Obj.tag == "Orb_H")
+        {
+            int maxHealth;
+
+            maxHealth = SB.maxHealth - Obj.GetComponent<DragDrop>().oneEquip.wert;
+            SB.access.SetMaxHealth(maxHealth);
+            maxHealth = 0;
+        }
+        if (Obj.tag == "Orb_M")
+        {
+            int maxMana;
+
+            maxMana = SB.maxMana - Obj.GetComponent<DragDrop>().oneEquip.wert;
+            SB.access.SetMaxMana(maxMana);
+            maxMana = 0;
+        }
+        if (Obj.tag == "Orb_S")
+        {
+            int maxStamina;
+
+            maxStamina = SB.maxStamina - Obj.GetComponent<DragDrop>().oneEquip.wert;
+            SB.access.SetMaxStamina(maxStamina);
+            maxStamina = 0;
+        }
     }
 
 
