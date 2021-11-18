@@ -28,6 +28,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         if (lastSlot != null)
         {
             lastSlot.GetComponent<ItemSlot>().oneEquip = default;          //Slot wird gecleard wenn vorhanden
+            EC.access.removeItem(gameObject.GetComponent<DragDrop>().oneEquip.objekt);
         }
         Debug.Log("Slot Saved");
         
@@ -51,11 +52,13 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             GetComponent<DragDrop>().oneEquip.slot = eventData.pointerCurrentRaycast.gameObject;                                            //Übergabe von Item slot auf droped Orb
             lastSlot = eventData.pointerCurrentRaycast.gameObject;                                                                     //Slot wird zwischen gespeichert
             eventData.pointerCurrentRaycast.gameObject.GetComponent<ItemSlot>().oneEquip = gameObject.GetComponent<DragDrop>().oneEquip;    //Slot bekommt werte von droped Orb
-            //EC.access.onEquipped(eventData.pointerCurrentRaycast.gameObject);                                                               //
+            //EC.access.onEquipped(eventData.pointerCurrentRaycast.gameObject);
+            EC.access.addItem(gameObject.GetComponent<DragDrop>().oneEquip.objekt);                                                               //
 
         }
         canvasGroup.alpha = 1f;
         canvasGroup.blocksRaycasts = true;
+        
     }
 
     public void OnPointerDown(PointerEventData eventData)
